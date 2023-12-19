@@ -4,5 +4,9 @@ public class Main {
         System.out.println(customList);
         customList.remove(6);
         System.out.println(customList);
+        customList.shiftByIndex(3);
+        System.out.println(customList);
+        customList.removeByIndex(5);
+        System.out.println(customList);
     }
 }

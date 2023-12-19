@@ -81,27 +81,37 @@ public class CustomList {
     }
 
     public void remove(int number) {
-        for (int i = 0;i < this.list.length;i++) {
+        for (int i = 0; i < this.list.length; i++) {
             if (this.list[i] == number) {
-              shiftByIndex(i);
-              return;
+                shiftByIndex(i);
+                return;
             }
         }
     }
 
-    private void shiftByIndex(int index) {
+    public void shiftByIndex(int index) {
         for (int i = index; i < this.list.length - 1; i++) {
             this.list[i] = this.list[i + 1];
         }
     }
 
+    public void removeByIndex(int index) {
+        if(index < this.list.length && index >= 0){
+            shiftByIndex(index);
+            pop();
+        }else{
+            System.out.println("Не верный индекс!");
+        }
+    }
 }
 
 //Задание 1: Реализация метода removeByIndex для удаления элемента по индексу в пользовательском списке.
 //
-//Описание задания: Вам необходимо разработать метод removeByIndex для пользовательского списка (CustomList), который будет осуществлять удаление элемента по указанному индексу.
+//Описание задания: Вам необходимо разработать метод removeByIndex для пользовательского списка
+// (CustomList), который будет осуществлять удаление элемента по указанному индексу.
 //
-//Убедитесь, что метод обрабатывает ситуации с корректными и некорректными индексами, а также что он корректно сдвигает и обновляет элементы списка после удаления.
+//Убедитесь, что метод обрабатывает ситуации с корректными и некорректными индексами,
+// а также что он корректно сдвигает и обновляет элементы списка после удаления.
 
 
 
