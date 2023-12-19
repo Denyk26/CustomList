@@ -8,5 +8,7 @@ public class Main {
         System.out.println(customList);
         customList.removeByIndex(5);
         System.out.println(customList);
+        customList.removeAllByIndex(4);
+        System.out.println(customList);
     }
 }
